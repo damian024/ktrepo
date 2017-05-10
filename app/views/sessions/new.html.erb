@@ -1,0 +1,30 @@
+<div class="text-center">
+	<h1>Log In</h1>
+</div>
+
+<%= form_tag sessions_path do %>
+
+<div class="form-horizontal">
+  <div class="col-md-offset-2 col-md-8">
+    <div class="form-group">
+      <%= label_tag :email %>
+      <%= text_field_tag :email %>
+    </div>
+  </div>
+  <div class="col-md-offset-2 col-md-8">
+    <div class="form-group">
+      <%= label_tag :password %>
+      <%= text_field_tag :password %>
+    </div>
+  </div>  
+  
+  <div class="col-md-offset-2 col-md-8">
+    <div class="form-group">
+      <%= submit_tag "Log In" %>
+    </div>
+  </div>
+</div>
+
+
+
+<% end %>

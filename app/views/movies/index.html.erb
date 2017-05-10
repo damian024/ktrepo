@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="text-center">
+<h1>Movies</h1>
+</div>
+
+
+<% @movies.each do |movie| %>
+<div class="col-md-12" style="padding-bottom: 20px">
+  <div class="col-md-3">
+    <img src="<%= movie.photo %>"/>
+  </div>
+  <div class="col-md-9">
+  <b>Title</b><br>
+  <%= movie.title %><br><br>
+  <b>Director</b><br>
+  <%= movie.director %><br><br>
+    <b>Year</b><br>
+  <%= movie.year %><br><br>
+  <b>Description</b><br>
+  <%= movie.description %><br><br>
+
+  <% if current_user %>
+  <%= link_to 'Show', movie, {:class => "btn btn-default"} %>
+  <%= link_to 'Edit', edit_movie_path(movie), {:class => "btn btn-default"} %>
+  <%= link_to 'Destroy', movie, :class => "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %>
+
+    <% end %>
+
+  </div>
+</div>
+<% end %>

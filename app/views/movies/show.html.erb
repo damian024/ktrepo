@@ -1,0 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<div class="col-md-12" style="padding-bottom: 20px">
+  <div class="col-md-3">
+    <img src="<%= @movie.photo %>"/>
+  </div>
+  <div class="col-md-9">
+  <b>Title</b><br>
+  <%= @movie.title %><br><br>
+  <b>Director</b><br>
+  <%= @movie.director %><br><br>
+    <b>Year</b><br>
+  <%= @movie.year %><br><br>
+  <b>Description</b><br>
+  <%= @movie.description %><br><br>
+
+<%= link_to 'Edit', edit_movie_path(@movie), {:class => "btn btn-default"} %>
+<%= link_to 'Back', movies_path, {:class => "btn btn-default"} %>
+
+
+  </div>
+</div>
